@@ -1,0 +1,3 @@
+# Market Data Pipeline
+
+This project is a lightweight ETL pipeline I built to explore AWS cloud services and practice real data-engineering workflows used in quantitative finance. The pipeline fetches historical equity price data using Python (yfinance), stores the raw files in an AWS S3 bucket using a structured folder layout, and provides update scripts to keep the dataset current. The goal is to create a reliable cloud-based store of market data that I can use for future quant research, portfolio modeling, and signal-development experiments.
