@@ -1,9 +1,10 @@
 from datetime import date
 
-from .shared import (
+from shared import (
     load_tickers,
-    fetch_historical_data,
+    fetch_OHCLV_daily,
     upload_to_s3,
+    get_last_covered_date
 )
 
 """
@@ -19,13 +20,18 @@ def main():
     print(f"[INFO] Loaded {len(tickers)} tickers: {tickers}")
 
     for ticker in tickers:
-        df = fetch_historical_data(ticker, START_DATE, END_DATE)
+        last_date = get_last_covered_date(ticker)
+        if last_date is not None:
+            print(f"[INFO] Skipping {ticker} — already has initial data in S3 (latest date: {last_date})")
+            continue
+
+        df = fetch_OHCLV_daily(ticker, START_DATE, END_DATE)
         if df.empty:
             print(f"[WARN] Skipping {ticker} (no data).")
             continue
-        
-        upload_to_s3(df, ticker, START_DATE, END_DATE)
-    
+
+        upload_to_s3("equities", df, ticker, START_DATE, END_DATE)
+
     print("\n[OK] Initial upload complete.")
 
 if __name__ == "__main__":

@@ -1,0 +1,15 @@
+{
+  "NASDAQ": [
+    "NVDA", "AAPL", "MSFT", "AMZN", "GOOGL", "GOOG", "AVGO", "META", "TSLA", "PLTR",
+    "ASML", "NFLX", "COST", "AMD", "CSCO", "AZN", "MU", "TMUS", "APP", "AMAT",
+    "SHOP", "ISRG", "LRCX", "PEP", "INTC", "INTU", "QCOM", "LIN", "AMGN", "BKNG",
+    "PDD", "TXN", "KLAC", "GILD", "ARM", "ADBE", "PANW", "ADI", "CRWD", "HON",
+    "VRTX", "CEG", "ADP", "MELI", "CMCSA", "DASH", "SBUX", "CDNS", "SNPS", "MRVL",
+    "ORLY", "MAR", "REGN", "ABNB", "CTAS", "MNST", "MDLZ", "CSX", "ADSK", "FTNT",
+    "WBD", "AEP", "TRI", "PYPL", "PCAR", "WDAY", "ROST", "NXPI", "IDXX", "DDOG",
+    "MSTR", "EA", "BKR", "ROP", "FAST", "TTWO", "XEL", "FANG", "EXC", "AXON",
+    "TEAM", "CCEP", "PAYX", "KDP", "CTSH", "GEHC", "ZS", "CPRT", "MCHP", "ODFL",
+    "VRSK", "CSGP", "KHC", "BIIB", "CHTR", "DXCM", "LULU", "ON", "GFS", "TTD",
+    "CDW"
+  ]
+}

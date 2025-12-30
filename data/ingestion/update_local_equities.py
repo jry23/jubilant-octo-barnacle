@@ -1,6 +1,6 @@
 from datetime import date, timedelta
 
-from .shared import (
+from shared import (
     load_tickers,
     fetch_historical_data,
     upload_to_s3,
@@ -44,7 +44,7 @@ def main():
             print(f"[WARN] No new rows for {ticker} in this range.")
             continue
 
-        upload_to_s3(df, ticker, start_str, end_str)
+        upload_to_s3("equities", df, ticker, start_str, end_str)
         updated.append(ticker)
 
     print(f"\n[OK] Incremental update complete. Updated tickers: {updated}")
