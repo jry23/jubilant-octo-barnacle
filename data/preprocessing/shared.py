@@ -8,6 +8,7 @@ from pathlib import Path
 BUCKET_NAME = "market-data-jyang130"
 s3 = boto3.client("s3")
 
+# Resolve config paths
 CURRENT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = CURRENT_DIR.parent
 TICKER_CONFIG_PATH = ROOT_DIR / "config" / "nasdaq.json"

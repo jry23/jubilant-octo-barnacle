@@ -2,10 +2,8 @@
 This file contains shared functions and constants for market data ingestion scripts.
 """
 import json
-from datetime import date
 from pathlib import Path
 
-import boto3
 import pandas as pd
 import yfinance as yf
 
@@ -21,9 +19,6 @@ FACTOR_URL = (
     "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/"
     "F-F_Research_Data_5_Factors_2x3_daily_CSV.zip"
 )
-
-# Shared S3 client
-s3 = boto3.client("s3")
 
 # Load tickers from config, makes it easier to add/remove in the future
 def load_tickers(config_path=TICKER_CONFIG_PATH):
